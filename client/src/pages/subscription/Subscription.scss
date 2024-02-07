@@ -1,0 +1,92 @@
+@import '../../mixins.scss';
+
+.subs-container{
+    margin: 20px;
+    background-color: var(--black) ;
+
+    .heading{
+        font-weight: 700;
+        color: white;
+        text-align: center;
+        font-size: 2.5rem;
+        line-height: 1;
+        margin: 8px;
+        margin-bottom: 20px;
+    }
+
+    .caption {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.514);
+        margin-bottom: 20px;
+    }
+
+    .content-container{
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+
+        .pricing-plan{
+            grid-column: span 1/span 1;
+            border: 2px solid rgba(255, 255, 255, 0.514);
+            border-radius: 1rem;
+            padding: 1.25rem;
+            margin: 0, 0.75rem;
+            color: white;
+
+            h2{
+                font-weight: 700;
+                margin-bottom: 1.25rem;
+                font-size: 1.25rem;
+                line-height: 1.75rem;
+            }
+
+            p{
+                font-size: 1.125rem;
+                line-height: 1.75rem;
+                margin-bottom: 20px;
+                color: rgba(255, 255, 255, 0.827);
+            }
+
+            h1{
+                font-size: 1.25rem;
+                line-height: 1.75rem;
+                font-weight: 700;
+                margin-bottom: 2rem;
+
+                span{
+                    font-size: 2.25rem;
+                    line-height: 2.5rem;
+                }
+            }
+
+            .list-item{
+                margin-bottom: 0.75rem;
+                display: flex;
+                flex-direction: row;
+                color: rgba(255, 255, 255, 0.827);
+
+                .icon{
+                    padding-bottom: 0.5rem;
+                }
+            }
+
+            .buy-button{
+                background-image: var(--gradient);
+                color: white;
+                font-size: 1rem;
+                font-weight: 600;
+                padding: 1rem;
+                margin-top: 2.5rem;
+                width: 100%;
+                border: none;
+                border-radius: 0.5rem;
+            }
+
+            .buy-button:hover{
+                opacity: 0.7;
+            }
+        }
+    }
+}
