@@ -33,7 +33,7 @@ export const Checkout = () => {
         }
 
         try {
-            const response = await axios.post('https://filmbox-tt11.onrender.com/api/checkout', { price });
+            const response = await axios.post('https://filmbox-c7us.onrender.com/api/checkout', { price });
             const order = response.data;
 
             var options = {
@@ -45,7 +45,7 @@ export const Checkout = () => {
                 image: icon,
                 order_id: order.razorpayOrder.id,
                 handler: async function (order) {
-                    axios.post("https://filmbox-tt11.onrender.com/api/paymentverification", order)
+                    axios.post("https://filmbox-c7us.onrender.com/api/paymentverification", order)
                     .then(res => {
                         navigate("/signup")
                     })
